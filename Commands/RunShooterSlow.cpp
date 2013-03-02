@@ -18,7 +18,7 @@ void RunShooterSlow::Execute() {
 }
 // Make this return true when this Comma and no longer needs to run execute()
 bool RunShooterSlow::IsFinished() {
-	return false;
+	return (Robot::oi->getCoDriver()->GetThrottle() > 0.1);
 }
 // Called once after isFinished returns true
 void RunShooterSlow::End() {

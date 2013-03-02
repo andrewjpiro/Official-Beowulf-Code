@@ -58,6 +58,7 @@ void Robot::TeleopInit() {
 	// continue until interrupted by another command, remove
 	// this line or comment it out.
 	autonomousCommand->Cancel();
+	SmartDashboard::PutNumber("ShooterSpeed", oi->getCoDriver()->GetThrottle());
 }
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)

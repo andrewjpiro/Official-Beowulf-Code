@@ -31,7 +31,7 @@ void ConveyModeSwitch::Execute() {
 	else
 	{
 		Robot::conveyor->conveyor->Set(-1.0);
-		Robot::conveyor->stopper->Set(DoubleSolenoid::kForward);
+		Robot::conveyor->stopper->Set(DoubleSolenoid::kReverse);
 		on = true;
 	}
 	

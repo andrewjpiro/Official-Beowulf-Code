@@ -26,7 +26,7 @@ void IntakeOnOff::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void IntakeOnOff::Execute() {
-		Robot::intake->intake->Set(1.0);
+		Robot::intake->intake->Set(-1.0);
 }
 
 // Make this return true when this Command no longer needs to run execute()
