@@ -25,13 +25,11 @@ void IntakeSwitch::Initialize() {
 void IntakeSwitch::Execute() {
 	if(on)
 	{
-		Robot::intake->intake->Set(0.0);
 		Robot::intake->spoiler->Set(DoubleSolenoid::kReverse);
 		on = false;
 	}
 	else
 	{
-		Robot::intake->intake->Set(-1.0);
 		Robot::intake->spoiler->Set(DoubleSolenoid::kForward);
 		on = true;
 	}

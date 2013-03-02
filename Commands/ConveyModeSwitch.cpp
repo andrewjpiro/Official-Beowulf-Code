@@ -25,12 +25,10 @@ void ConveyModeSwitch::Initialize() {
 void ConveyModeSwitch::Execute() {
 	if(on)
 	{
-		Robot::conveyor->conveyor->Set(0.0);
 		on = false;
 	}
 	else
 	{
-		Robot::conveyor->conveyor->Set(-1.0);
 		Robot::conveyor->stopper->Set(DoubleSolenoid::kReverse);
 		on = true;
 	}

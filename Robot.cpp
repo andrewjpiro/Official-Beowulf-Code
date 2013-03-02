@@ -58,11 +58,17 @@ void Robot::TeleopInit() {
 	// continue until interrupted by another command, remove
 	// this line or comment it out.
 	autonomousCommand->Cancel();
-	SmartDashboard::PutNumber("ShooterSpeed", oi->getCoDriver()->GetThrottle());
 }
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
 		Scheduler::GetInstance()->Run();
+	SmartDashboard::PutNumber("ShooterSpeed", oi->getCoDriver()->GetThrottle());
+	SmartDashboard::PutNumber("ShooterEncoder", shooter->shooterEncoder->GetRate());
+	SmartDashboard::PutNumber("DriveEncoder", chassis->rEncoder->GetDistance());
+	SmartDashboard::PutNumber("ArmEncoder", arm->armEncoder->GetDistance());
+	SmartDashboard::PutNumber("Gyro", chassis->gyro->GetAngle());
+	SmartDashboard::PutBoolean("LightSensor", conveyor->lightSensor->Get());
+
 
 }
 void Robot::TestPeriodic() {

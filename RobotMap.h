@@ -23,10 +23,13 @@ public:
 	static DoubleSolenoid* shifterShifter;
 	static CANJaguar* shooterShooter1;
 	static CANJaguar* shooterShooter2;
+	static Encoder* shooterShooterEncoder;
 	static CANJaguar* chassisFrontLeft;
 	static CANJaguar* chassisRearLeft;
 	static CANJaguar* chassisFrontRight;
 	static CANJaguar* chassisRearRight;
+	static Encoder* chassisREncoder;
+	static Gyro* chassisGyro;
 	static RobotDrive* chassisRobotDrive;
 	static CANJaguar* armArm1;
 	static CANJaguar* armArm2;
