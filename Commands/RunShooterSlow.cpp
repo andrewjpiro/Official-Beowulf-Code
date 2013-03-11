@@ -12,7 +12,7 @@ void RunShooterSlow::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void RunShooterSlow::Execute() {
-	const double slowSpeed = 0.45;
+	const double slowSpeed = Robot::autoPref->GetDouble("PyramidSpeed", 0.45);
 	Robot::shooter->shooter1->Set(slowSpeed);
 	Robot::shooter->shooter2->Set(slowSpeed);
 }
