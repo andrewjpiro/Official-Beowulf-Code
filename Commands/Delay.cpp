@@ -16,7 +16,7 @@ void Delay::Execute() {
 }
 // Make this return true when this Comma and no longer needs to run execute()
 bool Delay::IsFinished() {
-	return timer.HasPeriodPassed(Robot::autoPref->GetDouble("DelayShooting", 0.0));
+	return timer.HasPeriodPassed(0.0 /*Robot::autoPref->GetDouble("DelayShooting", 0.0)*/);
 }
 // Called once after isFinished returns true
 void Delay::End() {
