@@ -17,7 +17,8 @@ PivotDown::PivotDown() {
 }
 // Called just before this Command runs the first time
 void PivotDown::Initialize() {
-	
+	Robot::arm->controller->Disable();
+
 }
 // Called repeatedly when this Command is scheduled to run
 void PivotDown::Execute() {

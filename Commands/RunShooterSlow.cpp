@@ -12,8 +12,9 @@ void RunShooterSlow::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void RunShooterSlow::Execute() {
-	const double slowSpeed = 0.45;
-	Robot::shooter->shooter1->Set(slowSpeed);
+	//const double slowSpeed = 0.45;
+	const double slowSpeed = Robot::autoPref->GetDouble("PyramidSpeed", 0.45);
+	Robot::shooter->shooter1->Set(slowSpeed * 3.0/2.0);
 	Robot::shooter->shooter2->Set(slowSpeed);
 }
 // Make this return true when this Comma and no longer needs to run execute()

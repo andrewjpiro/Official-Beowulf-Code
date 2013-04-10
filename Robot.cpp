@@ -81,7 +81,8 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("ArmEncoder", arm->armEncoder->GetDistance());
 	SmartDashboard::PutNumber("Gyro", chassis->gyro->GetAngle());
 	SmartDashboard::PutBoolean("LightSensor", conveyor->lightSensor->Get());
-	SmartDashboard::PutNumber("PrefRead",autoPref->GetDouble("DelayShooting", 0.0));
+	SmartDashboard::PutNumber("DelayShooting",autoPref->GetDouble("DelayShooting", 0.0));
+	SmartDashboard::PutNumber("DPad", oi->getCoDriver()->GetRawAxis(6));
 
 }
 void Robot::TestPeriodic() {
